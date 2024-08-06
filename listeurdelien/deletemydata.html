@@ -64,7 +64,7 @@
     <script>
         function sendMail(event) {
             event.preventDefault();
-            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
             const subject = encodeURIComponent('request for deletion of my data');
             const body = encodeURIComponent(`Hi, my email is: ${username} and I would like to delete my account`);
             window.location.href = `mailto:gregcorp@proton.me?subject=${subject}&body=${body}`;
@@ -75,8 +75,8 @@
     <div class="container">
         <h2>Delete Data</h2>
         <form onsubmit="sendMail(event)">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+            <label for="email">email</label>
+            <input type="text" id="email" name="email" required>
 
             <div class="button-container">
                 <button type="submit">Delete</button>
